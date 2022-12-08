@@ -6,7 +6,7 @@
 | 2   | [Rock Paper Scissors](./2-rock-paper-scissors/README.md)         | [Solution](./2-rock-paper-scissors/solution.js)     |
 | 3   | [Rucksack Reorganization](./3-rucksack-reorganization/README.md) | [Solution](./3-rucksack-reorganization/solution.js) |
 | 4   | [Camp Cleanup](./4-camp-cleanup/README.md)                       | [Solution](./4-camp-cleanup/solution.js)            |
-| 5   |                                                                  |                                                     |
+| 5   | [Supply Stacks](./5-supply-stacks/README.md)                     | [Solution](./5-supply-stacks/solution.js)           |
 | 6   |                                                                  |                                                     |
 | 7   |                                                                  |                                                     |
 | 8   |                                                                  |                                                     |

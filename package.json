@@ -1,3 +1,6 @@
 {
+  "scripts": {
+    "create-problem": "node scripts/create-problem.js"
+  },
   "type": "module"
 }
