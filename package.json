@@ -1,6 +1,10 @@
 {
   "scripts": {
-    "create-problem": "node scripts/create-problem.js"
+    "create-problem": "node scripts/create-problem.js",
+    "test": "vitest"
   },
-  "type": "module"
+  "type": "module",
+  "devDependencies": {
+    "vitest": "^0.34.6"
+  }
 }
