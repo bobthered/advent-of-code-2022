@@ -10,7 +10,7 @@
 | 6   | [Tuning Trouble](./6-tuning-trouble/README.md)                   | [Solution](./6-tuning-trouble/solution.js)                                                                  |
 | 7   | [No Space Left On Device](./7-no-space-left-on-device/README.md) | [Solution](./7-no-space-left-on-device/solution.js)                                                         |
 | 8   | [Treetop Tree House](./8-treetop-tree-house/README.md)           | [Part One](./8-treetop-tree-house/visibleTreeCount.js) \| [Part Two](./8-treetop-tree-house/scenicScore.js) |
-| 9   |                                                                  |                                                                                                             |
+| 9 | [Rope Bridge](./9-rope-bridge/README.md) | [Solution](./9-rope-bridge/solution.js)|
 | 10  |                                                                  |                                                                                                             |
 | 11  |                                                                  |                                                                                                             |
 | 12  |                                                                  |                                                                                                             |
