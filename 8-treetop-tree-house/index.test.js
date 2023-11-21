@@ -1,6 +1,7 @@
 import { describe, it, expect } from 'vitest';
 import input from './input';
-import { solution } from './solution';
+import { scenicScore } from './scenicScore';
+import { visibleTreeCount } from './visibleTreeCount';
 
 describe('Part One', () => {
     it('Example', () => {
@@ -9,9 +10,23 @@ describe('Part One', () => {
 65332
 33549
 35390`
-        expect(solution(example)).toBe(21)
+        expect(visibleTreeCount(example)).toBe(21)
     });
     it('User Puzzle Input', () => {
-        expect(solution(input)).toBe(1538)
+        expect(visibleTreeCount(input)).toBe(1538)
+    })
+});
+
+describe('Part Two', () => {
+    it('Example', () => {
+        let example = `30373
+25512
+65332
+33549
+35390`
+        expect(scenicScore(example)).toBe(8)
+    });
+    it('User Puzzle Input', () => {
+        expect(scenicScore(input)).toBe(496125)
     })
 });

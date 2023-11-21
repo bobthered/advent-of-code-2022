@@ -1,4 +1,4 @@
-export const solution = (input = '') => {
+export const visibleTreeCount = (input = '') => {
     // split input into rows
     input = input.split('\n').map(row => row.split(''));
 
@@ -74,6 +74,5 @@ export const solution = (input = '') => {
     })
 
     // count all visible trees
-    const visibleTreeCount = visibleTreeArray.flat().reduce((total, current) => total + current, 0);
-    return visibleTreeCount
+    return visibleTreeArray.flat().reduce((total, current) => total + current, 0)
 }
