@@ -1,4 +1,4 @@
-const createMonkey = (monkeyLines) => {
+const createMonkey = (monkeyLines, divideBy) => {
 	// split lines
 	monkeyLines = monkeyLines.split('\n');
 
@@ -22,7 +22,7 @@ const createMonkey = (monkeyLines) => {
 		// loop over current items
 		itemWorryLevels = itemWorryLevels.filter(itemWorryLevel => {
 			itemWorryLevel = eval(operation.replace(/old/g, itemWorryLevel))
-			itemWorryLevel = Math.floor(itemWorryLevel / 3)
+			itemWorryLevel = Math.floor(itemWorryLevel / divideBy)
 			itemsToThrow.push({ itemWorryLevel, monkeyIndex: itemWorryLevel % divisibleBy === 0 ? ifTrueMonkeyIndex : ifFalseMonkeyIndex })
 			numberItemsInspected++;
 			return false;
@@ -30,18 +30,21 @@ const createMonkey = (monkeyLines) => {
 
 		return itemsToThrow;
 	}
+	const getDivisibleBy = () => divisibleBy;
 	const getNumberItemsInspected = () => numberItemsInspected;
 
 	return {
 		addItem,
 		determineItemsToThrow,
+		getDivisibleBy,
 		getNumberItemsInspected
 	}
 }
 
-export const solution = (input = '', rounds = 20) => {
+export const solution = (input = '', rounds = 20, divideBy = 3) => {
 	// parse input
-	let monkeys = input.split('\n\n').map(monkeyInput => createMonkey(monkeyInput));
+	let monkeys = input.split('\n\n').map(monkeyInput => createMonkey(monkeyInput, divideBy));
+	const divider = monkeys.reduce((total, monkey) => total * monkey.getDivisibleBy(), 1)
 
 	// round loop
 	for (let round = 0; round < rounds; round++) {
@@ -50,11 +53,10 @@ export const solution = (input = '', rounds = 20) => {
 			const monkey = monkeys[monkeyIndex];
 			const itemsToThrow = monkey.determineItemsToThrow();
 			itemsToThrow.map(({ itemWorryLevel, monkeyIndex }) => {
-				monkeys[monkeyIndex].addItem(itemWorryLevel)
+				monkeys[monkeyIndex].addItem(itemWorryLevel % divider)
 			})
 		}
 	}
-
 	// get two most active monkeys
 	const [activeMonkey1, activeMonkey2] = monkeys.sort((a, b) => a.getNumberItemsInspected() > b.getNumberItemsInspected() ? -1 : a.getNumberItemsInspected() < b.getNumberItemsInspected() ? 1 : 0)
 
