@@ -12,7 +12,7 @@
 | 8   | [Treetop Tree House](./8-treetop-tree-house/README.md)           | [Part One](./8-treetop-tree-house/visibleTreeCount.js) \| [Part Two](./8-treetop-tree-house/scenicScore.js) |
 | 9 | [Rope Bridge](./9-rope-bridge/README.md) | [Solution](./9-rope-bridge/solution.js)|
 | 10 | [Cathode-Ray Tube](./10-cathode-ray-tube/README.md) | [Solution](./10-cathode-ray-tube/solution.js)|
-| 11  |                                                                  |                                                                                                             |
+| 11 | [Monkey in the Middle](./11-monkey-in-the-middle/README.md) | [Solution](./11-monkey-in-the-middle/solution.js)|
 | 12  |                                                                  |                                                                                                             |
 | 13  |                                                                  |                                                                                                             |
 | 14  |                                                                  |                                                                                                             |
