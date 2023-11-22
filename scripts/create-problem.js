@@ -30,24 +30,22 @@ if (!fs.existsSync(`./${path}`)) {
 
   const files = [
     {
-      path: `./${path}/index.test.js`, content: [
-        `import { describe, it, expect } from 'vitest';`,
-        `import { input } from './input';`,
-        `import { solution } from './solution';`,
-        '',
-        `describe('Part One', () => {`,
-        `\tit('Example', () => {`,
-        `\t\tlet example = \`\`;`,
-        `\t\texpect(solution(example)).toBe(1);`,
-        `\t})`,
-        '',
-        `\tit('User Puzzle Input', () => {`,
-        `\t\texpect(solution(input)).toBe(1);`,
-        `\t})`,
-        `})`
-      ].join('\r')
+      path: `./${path}/index.test.js`, content:
+        `import { describe, it, expect } from 'vitest';
+import { example1, example2, input } from './input';
+import { solution } from './solution';
+
+describe('Part One', () => {
+  it('Example', () => {
+    expect(solution(example1)).toBe(1);
+  })
+
+  it('User Puzzle Input', () => {
+    expect(solution(input)).toBe(1);
+  })
+})`
     },
-    { path: `./${path}/input.js`, content: `export const input = \`\`;` },
+    { path: `./${path}/input.js`, content: `export const example1 = \`\`;\rexport const example2 = \`\`;\rexport const input = \`\`;` },
     { path: `./${path}/README.md`, content: `# ${day} - ${title}` },
     { path: `./${path}/solution.js`, content: `export const solution = (input = '') => {\r\treturn 1;\r}` },
   ]
