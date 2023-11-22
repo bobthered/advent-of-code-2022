@@ -1,13 +1,33 @@
 import { describe, it, expect } from 'vitest';
 import { example1, input } from './input';
-import { solution } from './solution';
+import { part1, part2 } from './solution';
 
 describe('Part One', () => {
 	it('Example', () => {
-		expect(solution(example1)).toBe(13140);
+		expect(part1(example1)).toBe(13140);
 	});
 
 	it('User Puzzle Input', () => {
-		expect(solution(input)).toBe(12880);
+		expect(part1(input)).toBe(12880);
+	})
+})
+
+describe('Part Two', () => {
+	it('Example', () => {
+		expect(part2(example1)).toBe(`##..##..##..##..##..##..##..##..##..##..
+###...###...###...###...###...###...###.
+####....####....####....####....####....
+#####.....#####.....#####.....#####.....
+######......######......######......####
+#######.......#######.......#######.....`);
+	});
+
+	it('User Puzzle Input', () => {
+		expect(part2(input)).toBe(`####..##....##..##..###....##.###..####.
+#....#..#....#.#..#.#..#....#.#..#.#....
+###..#.......#.#..#.#..#....#.#..#.###..
+#....#.......#.####.###.....#.###..#....
+#....#..#.#..#.#..#.#....#..#.#.#..#....
+#.....##...##..#..#.#.....##..#..#.####.`);
 	})
 })
