@@ -13,7 +13,7 @@
 | 9 | [Rope Bridge](./9-rope-bridge/README.md) | [Solution](./9-rope-bridge/solution.js)|
 | 10 | [Cathode-Ray Tube](./10-cathode-ray-tube/README.md) | [Solution](./10-cathode-ray-tube/solution.js)|
 | 11 | [Monkey in the Middle](./11-monkey-in-the-middle/README.md) | [Solution](./11-monkey-in-the-middle/solution.js)|
-| 12  |                                                                  |                                                                                                             |
+| 12 | [Hill Climbing Algorithm](./12-hill-climbing-algorithm/README.md) | [Solution](./12-hill-climbing-algorithm/solution.js)|
 | 13  |                                                                  |                                                                                                             |
 | 14  |                                                                  |                                                                                                             |
 | 15  |                                                                  |                                                                                                             |
