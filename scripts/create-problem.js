@@ -46,8 +46,19 @@ describe('Part One', () => {
 })`
     },
     { path: `./${path}/input.js`, content: `export const example1 = \`\`;\rexport const example2 = \`\`;\rexport const input = \`\`;` },
+    {
+      path: `./${path}/parseInput.js`, content: `export const parseInput = (input = '') => {
+  
+}`},
     { path: `./${path}/README.md`, content: `# ${day} - ${title}` },
-    { path: `./${path}/solution.js`, content: `export const solution = (input = '') => {\r\treturn 1;\r}` },
+    {
+      path: `./${path}/solution.js`, content: `import { parseInput } from "./parseInput";
+export const solution = (input = '') => {
+  // parse input
+  input = parseInput(input);
+  
+  return 1;
+}` },
   ]
 
   files.map((file) => {
