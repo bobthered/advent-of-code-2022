@@ -1,13 +1,23 @@
 import { describe, it, expect } from 'vitest';
 import { example1, input } from './input';
-import { solution } from './solution';
+import { partOne, partTwo } from './solution';
 
 describe('Part One', () => {
   it('Example', () => {
-    expect(solution(example1)).toBe(31);
+    expect(partOne(example1)).toBe(31);
   })
 
   it('User Puzzle Input', () => {
-    expect(solution(input)).toBe(449);
+    expect(partOne(input)).toBe(449);
+  })
+})
+
+describe('Part Two', () => {
+  it('Example', () => {
+    expect(partTwo(example1)).toBe(29);
+  })
+
+  it('User Puzzle Input', () => {
+    expect(partTwo(input)).toBe(443);
   })
 })
